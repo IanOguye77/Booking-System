@@ -19,6 +19,7 @@
     <div class="container_pssngr_1">
         <!-- <form action="payment page.php" method="post" onsubmit=" return validate()"> -->
             <?php
+         if(isset($_POST['submit'])){
             session_start();
             $a = $_SESSION['frm'];
             $b = $_SESSION['to'];
@@ -47,6 +48,7 @@
             
             $_SESSION["fph"] = $_POST['fair_name'];
             $_SESSION["bsnm"] = $_POST['radio_name'];
+         }
             ?>
     </div>
     <form action="payment page.php" method="post" onsubmit=" return validate()">
