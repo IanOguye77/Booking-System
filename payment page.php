@@ -73,6 +73,7 @@
 <body>
 
     <?php
+  if(isset($_POST['submit'])){
     session_start();
     $_SESSION['no'] = $_POST["num_name"];
     $a = 1;
@@ -99,7 +100,7 @@
     $querry = "UPDATE bus_details SET seats_available = seats_available - $z WHERE bus_name = '$x'";
     $result = mysqli_query($db, $querry) or die("Could not execute querry" . mysqli_error($db));
 
-
+   }
     ?>
 
     <script>
